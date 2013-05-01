@@ -32,7 +32,7 @@ describe "UserPages" do
         before { click_button submit }
 
         it { should have_selector('title', text: 'Sign up') }
-        it { should have_selector('div', text: /The form contains \d+ errors?/) }
+        it { should have_error_message(/The form contains \d+ errors?/) }
       end
     end
 
